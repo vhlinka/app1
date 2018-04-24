@@ -31,7 +31,7 @@
 
   <div class="form-group">
     <%= label f, :password_hash, class: "control-label" %>
-    <%= text_input f, :password_hash, class: "form-control" %>
+    <%= password_input f, :password_hash, placeholder: "Password" , class: "form-control" %>
     <%= error_tag f, :password_hash %>
   </div>
 

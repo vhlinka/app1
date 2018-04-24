@@ -19,7 +19,9 @@ defmodule App1Web.Router do
 
     get "/", PageController, :index
 
-    resources "/logger", LoggerController
+    resources "/sessions", SessionController, only: [:new, :create, :delete]
+
+    resources "/loggers", LoggerController
     resources "/locations", LocationController
     resources "/clients", ClientController
     resources "/users", UserController

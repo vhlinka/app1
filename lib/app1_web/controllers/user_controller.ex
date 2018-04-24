@@ -4,7 +4,7 @@ defmodule App1Web.UserController do
   alias App1.Security
   alias App1.Security.User
 
-  plug :authenticate_user when action in [:index, :show, :new, :show, :create, :edit, :update, :delete]
+  plug :authenticate_user when action in []
 
   def index(conn, _params) do
     users = Security.list_users()
