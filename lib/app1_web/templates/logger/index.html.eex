@@ -1,0 +1,36 @@
+<h2>Listing Logger</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Manufacture dte</th>
+      <th>Battery dte</th>
+      <th>In service dte</th>
+      <th>Number trips</th>
+      <th>Last used dte</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for logger <- @logger do %>
+    <tr>
+      <td><%= logger.name %></td>
+      <td><%= logger.manufacture_dte %></td>
+      <td><%= logger.battery_dte %></td>
+      <td><%= logger.in_service_dte %></td>
+      <td><%= logger.number_trips %></td>
+      <td><%= logger.last_used_dte %></td>
+
+      <td class="text-right">
+        <span><%= link "Show", to: logger_path(@conn, :show, logger), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Edit", to: logger_path(@conn, :edit, logger), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Delete", to: logger_path(@conn, :delete, logger), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Logger", to: logger_path(@conn, :new) %></span>

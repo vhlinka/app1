@@ -1,0 +1,36 @@
+<div class="jumbotron">
+  <h2><%= gettext "Package Logger %{name}!", name: "POC" %></h2>
+  <p class="lead">Dashboard and Management<br />applicaiton (version A.0.0.1)</p>
+</div>
+
+<div class="row marketing">
+  <div class="col-lg-6">
+    <h4>POC Features</h4>
+    <ul>
+      <li>
+        <%= link "Logger Device Info", to: logger_path( @conn, :index ) %>
+      </li>
+      <li>
+        <%= link "Client Info", to: client_path( @conn, :index ) %>
+      </li>
+      <li>
+        <%= link "Location Info", to: location_path( @conn, :index ) %>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-lg-6">
+    <h4>Company Info</h4>
+    <ul>
+      <li>
+        <a href="https://www.awaretk.com/about/">About</a>
+      </li>
+      <li>
+        <a href="https://awaretk.com/contact/">Contact Us</a>
+      </li>
+      <li>
+        <a href="https://awaretk.com/media/">News</a>
+      </li>
+    </ul>
+  </div>
+</div>

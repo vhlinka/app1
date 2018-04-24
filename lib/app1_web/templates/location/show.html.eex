@@ -1,0 +1,43 @@
+<h2>Show Location</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @location.name %>
+  </li>
+
+  <li>
+    <strong>Contract dte:</strong>
+    <%= @location.contract_dte %>
+  </li>
+
+  <li>
+    <strong>Addr1:</strong>
+    <%= @location.addr1 %>
+  </li>
+
+  <li>
+    <strong>Addr2:</strong>
+    <%= @location.addr2 %>
+  </li>
+
+  <li>
+    <strong>City:</strong>
+    <%= @location.city %>
+  </li>
+
+  <li>
+    <strong>State:</strong>
+    <%= @location.state %>
+  </li>
+
+  <li>
+    <strong>Zip:</strong>
+    <%= @location.zip %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: location_path(@conn, :edit, @location) %></span>
+<span><%= link "Back", to: location_path(@conn, :index) %></span>

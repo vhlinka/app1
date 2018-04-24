@@ -1,0 +1,38 @@
+<h2>Show Logger</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @logger.name %>
+  </li>
+
+  <li>
+    <strong>Manufacture dte:</strong>
+    <%= @logger.manufacture_dte %>
+  </li>
+
+  <li>
+    <strong>Battery dte:</strong>
+    <%= @logger.battery_dte %>
+  </li>
+
+  <li>
+    <strong>In service dte:</strong>
+    <%= @logger.in_service_dte %>
+  </li>
+
+  <li>
+    <strong>Number trips:</strong>
+    <%= @logger.number_trips %>
+  </li>
+
+  <li>
+    <strong>Last used dte:</strong>
+    <%= @logger.last_used_dte %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: logger_path(@conn, :edit, @logger) %></span>
+<span><%= link "Back", to: logger_path(@conn, :index) %></span>

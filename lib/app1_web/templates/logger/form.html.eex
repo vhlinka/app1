@@ -1,0 +1,47 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= label f, :name, class: "control-label" %>
+    <%= text_input f, :name, class: "form-control" %>
+    <%= error_tag f, :name %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :manufacture_dte, class: "control-label" %>
+    <%= date_select f, :manufacture_dte, class: "form-control" %>
+    <%= error_tag f, :manufacture_dte %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :battery_dte, class: "control-label" %>
+    <%= date_select f, :battery_dte, class: "form-control" %>
+    <%= error_tag f, :battery_dte %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :in_service_dte, class: "control-label" %>
+    <%= date_select f, :in_service_dte, class: "form-control" %>
+    <%= error_tag f, :in_service_dte %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :number_trips, class: "control-label" %>
+    <%= number_input f, :number_trips, class: "form-control" %>
+    <%= error_tag f, :number_trips %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :last_used_dte, class: "control-label" %>
+    <%= date_select f, :last_used_dte, class: "form-control" %>
+    <%= error_tag f, :last_used_dte %>
+  </div>
+
+  <div class="form-group">
+    <%= submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>

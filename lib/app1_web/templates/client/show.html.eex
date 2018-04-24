@@ -1,0 +1,43 @@
+<h2>Show Client</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @client.name %>
+  </li>
+
+  <li>
+    <strong>Contract dte:</strong>
+    <%= @client.contract_dte %>
+  </li>
+
+  <li>
+    <strong>Addr1:</strong>
+    <%= @client.addr1 %>
+  </li>
+
+  <li>
+    <strong>Addr2:</strong>
+    <%= @client.addr2 %>
+  </li>
+
+  <li>
+    <strong>City:</strong>
+    <%= @client.city %>
+  </li>
+
+  <li>
+    <strong>State:</strong>
+    <%= @client.state %>
+  </li>
+
+  <li>
+    <strong>Zip:</strong>
+    <%= @client.zip %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: client_path(@conn, :edit, @client) %></span>
+<span><%= link "Back", to: client_path(@conn, :index) %></span>
