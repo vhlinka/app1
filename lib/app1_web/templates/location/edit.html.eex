@@ -1,5 +1,5 @@
-<h2>Edit Location</h2>
+<span class="back"><%= link "< Back", to: location_path(@conn, :index) %></span>
+
+<h2 class="form">Edit Location</h2>
 
 <%= render "form.html", Map.put(assigns, :action, location_path(@conn, :update, @location)) %>
-
-<span><%= link "Back", to: location_path(@conn, :index) %></span>

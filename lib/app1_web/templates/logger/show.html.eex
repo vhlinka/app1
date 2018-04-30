@@ -1,4 +1,6 @@
-<h2>Show Logger</h2>
+<span class="back"><%= link "< Back", to: logger_path(@conn, :index) %></span>
+
+<h2 class="form">Show Logger</h2>
 
 <ul>
 
@@ -34,5 +36,4 @@
 
 </ul>
 
-<span><%= link "Edit", to: logger_path(@conn, :edit, @logger) %></span>
-<span><%= link "Back", to: logger_path(@conn, :index) %></span>
+<span class="btn btn-primary"><%= link "Edit", to: logger_path(@conn, :edit, @logger) %></span>

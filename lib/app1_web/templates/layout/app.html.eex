@@ -9,6 +9,7 @@
 
     <title>Hello App1!</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,600" rel="stylesheet">
   </head>
 
   <body>
@@ -16,6 +17,8 @@
       <header class="header">
         <nav role="navigation">
           <ol class="breadcrumb text-right">
+            <span class="logo"><%= link "", to: page_path(@conn, :index) %></span>
+            <div class="navigation-links">
             <%= if @current_user do %>
               <li><%= @current_user.username %></li>
               <%= link "Log out", to: session_path(@conn, :delete, @current_user), method: "delete" %>
@@ -23,9 +26,9 @@
             <% else %>
               <%= link "Log in", to: session_path(@conn, :new) %>
             <% end %>
+          </div>
           </ol>
         </nav>
-        <span class="logo"></span>
       </header>
 
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>

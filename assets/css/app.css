@@ -1,1 +1,327 @@
-/* This file is for your main application css. */
+/*COLORS*/
+:root {
+  --navy: #171F49;
+  --blue: #35668B;
+  --orange: #F16622;
+  --yellow: #F5AE2C;
+  --gray-dark: #41404D;
+  --gray-medium: #b1afbf;
+  --gray-light: #f5f4fc;
+}
+
+/*CROSS PAGE STYLING*/
+* {
+  font-family: 'Poppins', Arial, sans-serif;
+}
+body, h1, h2, h3, h4, h5, h6, li {
+  color: var(--gray-dark);
+}
+h1 {
+  font-weight: 600;
+  font-size: 4.5em;
+}
+h2 {
+  font-weight: 600;
+  font-size: 3.2em;
+}
+h3 {
+  font-weight: 600;
+  font-size: 2.9em;
+}
+h4 {
+  font-weight: 600;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: .25em;
+}
+h5 {
+  font-weight: 600;
+  font-size: 2em;
+}
+p {
+  font-size: 1em;
+}
+a {
+  color: var(--blue);
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+a:hover {
+  text-transform: none;
+  color: var(--navy);
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+li {
+  padding-left: 1em;
+  text-indent: -.7em;
+  line-height: 1.7em;
+}
+li::before {
+  content: "•  ";
+  color: var(--gray-dark);
+  padding-right: .5em;
+}
+button {
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  outline: none;
+}
+.form-control{
+  display:block;
+  width:100%;
+  height:50px;
+  padding:6px 12px;
+  font-size:1em;
+  line-height:1.5;
+  color:var(--gray-dark);
+  background-color:#fff;
+  background-image:none;
+  border:1px solid var(--gray-medium);
+  border-radius:0;
+  -webkit-transition:border-color ease-in-out .15s;
+  -o-transition:border-color ease-in-out .15s;
+  transition:border-color ease-in-out .15s;
+  }
+.form-control:focus{
+    border-color:var(--blue);
+    outline:0;
+}
+.form-control::-moz-placeholder{
+  color:var(--gray-medium);
+}
+.form-control:-ms-input-placeholder{
+  color:var(--gray-medium);
+}
+.form-control::-webkit-input-placeholder{
+  color:var(--gray-medium);
+}
+.btn.btn-primary{
+  color:#fff;
+  background-color: #25486E;
+  border: none;
+  border-radius: 35px;
+  font-weight: 600;
+  padding: 12px 30px;
+}
+.btn.btn-primary a {
+  color: white;
+}
+.btn-primary.focus,.btn-primary:focus{
+  color:#fff;
+  background-color:#286090;
+}
+.btn-primary:hover{
+  color:#fff;
+  background-color:var(--navy);
+}
+.btn-primary.active,.btn-primary:active,.open>.dropdown-toggle.btn-primary{
+  color:#fff;
+  background-color:#286090;
+}
+.btn-primary.active.focus,.btn-primary.active:focus,.btn-primary.active:hover,.btn-primary:active.focus,.btn-primary:active:focus,.btn-primary:active:hover,.open>.dropdown-toggle.btn-primary.focus,.open>.dropdown-toggle.btn-primary:focus,.open>.dropdown-toggle.btn-primary:hover{
+  color:#fff;
+  background-color:#204d74;
+}
+.btn-primary.active,.btn-primary:active,.open>.dropdown-toggle.btn-primary{
+  background-image:none
+}
+.btn-default.btn-xs {
+  color: var(--gray-dark);
+  border: 1px solid var(--gray-medium);
+}
+.btn-default:hover{
+  background-color:var(--gray-light);
+  border-color:var(--gray-medium);
+}
+.btn.btn-danger{
+  color:#bf2327;
+  background-color:white;
+  border-color:#bf2327;
+}
+.btn-danger:hover{
+  background-color:#bf2327;
+  border: 1px solid #bf2327;
+  color: white;
+}
+.alert{
+  padding:15px;
+  margin-bottom:20px;
+  border:1px solid transparent;
+}
+.alert h4{
+  margin-top:0;
+  color:inherit;
+}
+.alert .alert-link{
+  font-weight:600;
+}
+.alert-danger{
+  color:#bf2327;
+  background-color:#efd9d7;
+}
+.alert-danger hr{
+  border-top-color:#bf2327;
+}
+.alert-danger .alert-link{
+  color:#bf2327;
+}
+a.table-link {
+  color: var(--gray-dark);
+}
+a.table-link:hover {
+  color: var(--orange);
+}
+/*HEADER*/
+.breadcrumb {
+  background-color: white;
+  padding: 8px 0;
+  height: 80px;
+  border-bottom: 1px solid var(--gray-medium);
+  border-radius: 0;
+}
+.logo {
+  width: 160px;
+  height: 40px;
+  float: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.breadcrumb a {
+  text-transform: uppercase;
+  letter-spacing: .25em;
+  color: var(--gray-dark);
+  display: block;
+  transform: translateY(50%);
+}
+.breadcrumb a:hover {
+  text-transform: uppercase;
+  letter-spacing: .25em;
+  color: var(--orange);
+}
+
+/*HOMEPAGE LOGGED OUT*/
+#no-left-padding {
+  padding-left: 0;
+}
+.side-menu a {
+  display: block;
+  border-top: 1px solid var(--gray-medium);
+  padding: 15px 0;
+  color: var(--gray-dark);
+}
+.side-menu a:hover {
+  color: var(--orange);
+}
+.jumbotron{
+  padding-top:20px;
+  padding-bottom:20px;
+  margin-bottom:30px;
+}
+.jumbotron h2 {
+  color: var(--orange);
+}
+.marketing h4 {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: white;
+}
+.marketing {
+  background-color: var(--navy);
+  padding: 15px 15px 50px 15px;
+}
+.marketing ul {
+  margin-top: 0;
+}
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  float: right;
+  margin-top: 10px;
+}
+.footer-links a {
+  color: white;
+}
+@media (max-width: 767px) {
+  .footer-links {
+    display: flex;
+    justify-content: initial;
+    margin-top: 10px;
+  }
+  .footer-links a {
+    margin-right: 30px;
+  }
+  #no-left-padding {
+    padding-left: 15px;
+  }
+  .side-menu a {
+    display: inline-block;
+    padding-right: 5vw;
+    padding-top: 0;
+    border-top: none;
+  }
+  .side-menu h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
+
+
+/*LOGIN*/
+.login {
+  max-width: 350px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 1vh;
+}
+
+/*LOGGERS*/
+thead tr {
+  background-color: var(--gray-light);
+}
+.table>thead>tr>th{
+  vertical-align:bottom;
+}
+.table>tbody>tr>td {
+  border-bottom:1px solid var(--gray-medium);
+}
+.text-right .btn-xs {
+  max-width: 80px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/*NEW LOGGER*/
+.form-group.col-lg-4 {
+  padding-left: 0;
+}
+.form-group.col-lg-12 {
+  padding-left: 0;
+}
+.form-group.col-lg-6 {
+  padding-left: 0;
+}
+.form-group {
+  margin-bottom: 30px;
+}
+.form-group .btn-primary {
+  margin-top: 20px;
+}
+h2.form {
+  margin-top: 10px;
+}
+.back a{
+  color: var(--gray-medium);
+}
+.back a:hover {
+  color: var(--orange);
+}

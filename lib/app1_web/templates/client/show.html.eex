@@ -1,4 +1,6 @@
-<h2>Show Client</h2>
+<span class="back"><%= link "< Back", to: client_path(@conn, :index) %></span>
+
+<h2 class="form">Show Client</h2>
 
 <ul>
 
@@ -39,5 +41,6 @@
 
 </ul>
 
-<span><%= link "Edit", to: client_path(@conn, :edit, @client) %></span>
-<span><%= link "Back", to: client_path(@conn, :index) %></span>
+<br>
+
+<span class="btn btn-primary"><%= link "Edit", to: client_path(@conn, :edit, @client) %></span>

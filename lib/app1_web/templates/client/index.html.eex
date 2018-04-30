@@ -17,7 +17,7 @@
   <tbody>
 <%= for client <- @clients do %>
     <tr>
-      <td><%= client.name %></td>
+      <td><%= link client.name, to: client_path(@conn, :show, client), class: "table-link" %></td>
       <td><%= client.contract_dte %></td>
       <td><%= client.addr1 %></td>
       <td><%= client.addr2 %></td>
@@ -26,7 +26,7 @@
       <td><%= client.zip %></td>
 
       <td class="text-right">
-        <span><%= link "Show", to: client_path(@conn, :show, client), class: "btn btn-default btn-xs" %></span>
+        <!-- <span><%= link "Show", to: client_path(@conn, :show, client), class: "btn btn-default btn-xs" %></span> -->
         <span><%= link "Edit", to: client_path(@conn, :edit, client), class: "btn btn-default btn-xs" %></span>
         <span><%= link "Delete", to: client_path(@conn, :delete, client), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
       </td>
@@ -35,4 +35,4 @@
   </tbody>
 </table>
 
-<span><%= link "New Client", to: client_path(@conn, :new) %></span>
+<span><%= link "New Client", to: client_path(@conn, :new), class: "btn btn-primary" %></span>

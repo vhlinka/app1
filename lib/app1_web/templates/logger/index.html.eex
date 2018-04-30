@@ -16,7 +16,7 @@
   <tbody>
 <%= for logger <- @logger do %>
     <tr>
-      <td><%= logger.name %></td>
+      <td><%= link logger.name, to: logger_path(@conn, :show, logger), class: "table-link" %></td>
       <td><%= logger.manufacture_dte %></td>
       <td><%= logger.battery_dte %></td>
       <td><%= logger.in_service_dte %></td>
@@ -24,7 +24,7 @@
       <td><%= logger.last_used_dte %></td>
 
       <td class="text-right">
-        <span><%= link "Show", to: logger_path(@conn, :show, logger), class: "btn btn-default btn-xs" %></span>
+        <!-- <span><%= link "Show", to: logger_path(@conn, :show, logger), class: "btn btn-default btn-xs" %></span> -->
         <span><%= link "Edit", to: logger_path(@conn, :edit, logger), class: "btn btn-default btn-xs" %></span>
         <span><%= link "Delete", to: logger_path(@conn, :delete, logger), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
       </td>
@@ -33,4 +33,4 @@
   </tbody>
 </table>
 
-<span><%= link "New Logger", to: logger_path(@conn, :new) %></span>
+<%= link "New Logger", to: logger_path(@conn, :new), class: "btn btn-primary" %>
