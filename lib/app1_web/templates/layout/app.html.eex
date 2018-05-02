@@ -18,7 +18,7 @@
         <nav role="navigation">
           <ol class="breadcrumb text-right">
             <span class="logo"><%= link "", to: page_path(@conn, :index) %></span>
-            <div class="navigation-links">
+            <div class="navigation-links" style="max-width: 100px;">
             <%= if @current_user do %>
               <li><%= @current_user.username %></li>
               <%= link "Log out", to: session_path(@conn, :delete, @current_user), method: "delete" %>

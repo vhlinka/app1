@@ -4,7 +4,7 @@ defmodule App1Web.ClientController do
   alias App1.Accounts
   alias App1.Accounts.Client
 
-  plug :authenticate_user when action in [:index, :show, :new, :show, :create, :edit, :update, :delete]
+  # plug :authenticate_user when action in [:index, :show, :new, :show, :create, :edit, :update, :delete]
 
 
   def index(conn, _params) do

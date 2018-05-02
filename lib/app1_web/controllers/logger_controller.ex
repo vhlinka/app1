@@ -4,7 +4,7 @@ defmodule App1Web.LoggerController do
   alias App1.Hardware
   alias App1.Hardware.Logger
 
-  plug :authenticate_user when action in [:index, :show, :new, :show, :create, :edit, :update, :delete]
+  # plug :authenticate_user when action in [:index, :show, :new, :show, :create, :edit, :update, :delete]
 
 
   def index(conn, _params) do
