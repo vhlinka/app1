@@ -192,6 +192,11 @@ select:focus {
 .alert-danger .alert-link{
   color:#bf2327;
 }
+.alert-info{
+  color:var(--navy);
+  background-color:#c9e0f2;
+  border-color:transparent;
+}
 a.table-link {
   color: var(--gray-dark);
 }
@@ -220,6 +225,7 @@ a.table-link:hover {
   color: var(--gray-dark);
   display: block;
   transform: translateY(50%);
+  padding-left: 3vw;
 }
 .breadcrumb a:hover {
   text-transform: uppercase;
@@ -231,6 +237,21 @@ a.table-link:hover {
   justify-content: space-between;
   float: right;
 }
+.navigation-links p{
+  transform: translateY(50%);
+  margin-bottom: 0;
+  border-right: 1px solid var(--gray-medium);
+  padding-right: 3vw;
+}
+.logo {
+  width: 210px;
+  height: 50px;
+  display: inline-block;
+  margin-bottom: 1em;
+  background-image: url("/images/awareability_logo.png");
+  background-size: contain;
+}
+
 
 /*HOMEPAGE LOGGED OUT*/
 #no-left-padding {
@@ -275,6 +296,10 @@ a.table-link:hover {
   color: white;
 }
 @media (max-width: 767px) {
+  .logo {
+    width: 30%;
+    min-width: 150px;
+  }
   .footer-links {
     display: flex;
     justify-content: initial;
@@ -295,6 +320,9 @@ a.table-link:hover {
   .side-menu h4 {
     margin-top: 0;
     margin-bottom: 10px;
+  }
+  .navigation-links p{
+    display: none;
   }
 }
 
