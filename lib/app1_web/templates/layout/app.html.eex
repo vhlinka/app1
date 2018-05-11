@@ -20,7 +20,7 @@
         <nav role="navigation">
           <ol class="breadcrumb text-right">
             <span class="logo"><%= link "", to: page_path(@conn, :index) %></span>
-            <div class="hamburger" onclick="myFunction(this)">
+            <div class="hamburger" onclick="mobileNav(this)">
               <div class="bar1"></div>
               <div class="bar2"></div>
               <div class="bar3"></div>
@@ -70,7 +70,7 @@
     </script>
 
     <script type="text/javascript">
-    function myFunction(x) {
+    function mobileNav(x) {
       x.classList.toggle("change");
     }
     </script>
